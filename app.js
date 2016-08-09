@@ -35,8 +35,14 @@ app.get('/:input', function(req, res) {
   if (/(^January|^February|^March|^April|^May|^June|^July|^August|^September|^October|^November|^December)\s[0-9]{1,2},\s[0-9]{2,4}$/i.test(req.params.input) ||
     /(^Jan|^Feb|^Mar|^Apr|^May|^Jun|^Jul|^Aug|^Sep|^Oct|^Nov|^Dec)\s[0-9]{1,2},\s[0-9]{2,4}$/i.test(req.params.input)) {
     inputMoment = moment.utc(req.params.input, ['MMMM D, YYYY', 'MMMM D, YY']);
-    naturalDate = inputMoment.format('LL');
-    unixDate = inputMoment.unix();
+
+    if (inputMoment._isValid) { //check if date provided is valid
+      naturalDate = inputMoment.format('LL');
+      unixDate = inputMoment.unix();
+    } else {
+      unixDate = null;
+      naturalDate = null;
+    }
   }
 
   //invalid date passed return null
