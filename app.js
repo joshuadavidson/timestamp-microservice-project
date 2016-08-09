@@ -5,13 +5,16 @@ const port = process.env.PORT || 3000; //set the port to server port or 3000 for
 //serve static assets from the public folder
 app.use('/assets', express.static(__dirname + '/public'));
 
-//main page route
+//landing page route
 app.get('/', function (req, res) {
-  res.sendFile('index.html', {root: __dirname + '/public/pages'});
+  res.sendFile('index.html', {root: __dirname + '/public/pages'}, function(err){
+    if (err) throw err;
+  });
+
 });
 
 //route for handling timestamp requests
-app.get('/*', function (req, res){
+app.get('/:input', function (req, res){
 
 });
 
