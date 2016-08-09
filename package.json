@@ -1,0 +1,22 @@
+{
+  "name": "timestamp-microservice-project",
+  "version": "1.0.0",
+  "description": "Free Code Camp timestamp microservice project.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuadavidson/timestamp-microservice-project.git"
+  },
+  "author": "Joshua Davidson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshuadavidson/timestamp-microservice-project/issues"
+  },
+  "homepage": "https://github.com/joshuadavidson/timestamp-microservice-project#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
