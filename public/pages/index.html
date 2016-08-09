@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title>Timestamp Microservice API</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- OG properties -->
+  <meta property="fb:app_id" content="" />
+  <meta property="og:url" content="https://timestamp-microservice-project.herokuapp.com/" />
+  <meta property="og:title" content="Timestamp Microservice API" />
+  <meta property="og:description" content="A timestamp microservice API that returns a JSON containing the unix timestamp and the natural language date" />
+  <meta property="og:image" content="https://jwaynedavidson.com/img/pomodoro-thumbnail.jpg" />
+
+  <!-- Links -->
+  <link rel="shortcut icon" href="https://jwaynedavidson.com/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://jwaynedavidson.com/scripts/gatracking.js"></script>
+</head>
+
+<body>
+
+  <div>
+    <h1><i class="fa fa-cogs"></i> Timestamp Microservice API</h1>
+
+    <h3><i class="fa fa-user"></i> Coded by <a href="https://jwaynedavidson.com">Joshua Davidson</a></h3>
+
+    <h3><i class="fa fa-info"></i> Description</h3>
+    <p>
+      The timestamp microservice API takes a single unix timestamp or natural language date and returns a JSON object containg the unix timestamp and the natural language date. If the passed string does not contain a unix timestamp or natural language date
+      then a JSON object containing null values is returned.
+    </p>
+
+    <p>
+      Modify the URL above to give it a try!
+    </p>
+
+    <h3><i class="fa fa-terminal"></i> Example Usage</h3>
+    <code>https://timestamp-microservice-project.herokuapp.com/January 1, 2016</code>
+    <br>
+    <code>https://timestamp-microservice-project.herokuapp.com/1451606400</code>
+
+    <h3><i class="fa fa-code"></i> Example Output</h3>
+    <code>{ "unix": 1451606400, "natural": January 1, 2016 }</code>
+
+
+  </div>
+
+</body>
+
+</html>
