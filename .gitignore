@@ -2,6 +2,7 @@
 ####################
 node_modules
 .tern-project
+.jshintrc
 
 # Compiled source #
 ###################
